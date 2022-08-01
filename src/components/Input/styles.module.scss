@@ -1,0 +1,51 @@
+@import 'src/styles/varibles/colors';
+
+.formInput {
+  cursor: text;
+  display: flex;
+  justify-content: center;
+  border: 1px solid $color-border;
+  border-radius: 10px;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 8px 10px;
+  width: auto;
+  transition:
+          border-color 0.2s linear,
+          background-color 0.2s linear;
+
+  input,
+  textarea {
+    background-color: transparent;
+    border: 0;
+    caret-color: $color-text;
+    color: $color-text;
+    font-family: "Avenir", sans-serif;
+    font-size: 14px;
+    outline: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  textarea {
+    height: auto;
+    resize: none;
+  }
+
+  &--textarea {
+    height: 80px;
+  }
+
+  &--invalid {
+    border-color: $color-error;
+  }
+
+  &--invalid .formInput__input:focus .formInput {
+    border-color: $color-error;
+  }
+}
+
+// input:first-child {
+//       text-transform: uppercase;
+//     }
+ 

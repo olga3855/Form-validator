@@ -1,0 +1,30 @@
+@import 'src/styles/varibles/colors';
+
+.formField {
+  margin-bottom: 20px;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    color: $color-grey;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+
+  &__labelText {
+    display: flex;
+    column-gap: 6px;
+  }
+
+  &__error {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-error;
+    margin-top: 5px;
+  }
+}

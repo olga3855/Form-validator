@@ -1,0 +1,50 @@
+@import 'src/styles/varibles/colors';
+
+.formValidationButton {
+  background-color: $color-primary;
+  color: $color-cards;
+  align-items: center;
+  height: 40px;
+  display: flex;
+  border: 1px solid $color-primary;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: bold;
+  justify-content: center;
+  line-height: 20px;
+  padding: 0 20px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s linear,
+    background-color 0.2s linear,
+    color 0.2s linear,
+    box-shadow 0.2s linear;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba($color-primary-rgb, 0.3);
+  }
+
+  &__label {
+    align-items: center;
+    display: flex;
+  }
+
+  &:not(.formValidationButton--disabled):hover {
+    background-color: $color-primary-hover;
+    border-color: $color-primary-hover;
+  }
+
+  &--disabled {
+    background-color: $color-border;
+    border-color: $color-border;
+    color: $color-grey;
+    cursor: not-allowed;
+    display: flex;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+}
